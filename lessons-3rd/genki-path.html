@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- ==============================================
+    *  HEAD
+=============================================== -->
+<head>
+  <meta charset="UTF-8" />
+  <title>Genki Exercises - 3rd Edition | Genki Study Resources</title>
+  <meta name="title" content="Genki Exercises - 3rd Edition | Genki Study Resources">
+  <meta name="description" content="Genki Study Resources offers a vast collection of exercises for practicing what is taught in Genki: An Integrated Course in Elementary Japanese.">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  
+  <!-- FAVICON -->
+  <link href="../resources/images/genkico.ico" rel="icon"/>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="../resources/css/style.css"/>
+</head>
+
+<!-- ==============================================
+    *  BODY
+============================================== -->
+<body>
+  <div class="app">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo-badge">げ</div>
+        <div class="sidebar-logo-text">GENKI</div>
+      </div>
+
+      <nav class="sidebar-main-nav">
+        <button class="sidebar-main-item active">
+          <span class="sidebar-main-item-icon">🏠</span>
+          <span class="sidebar-main-item-label">Learn</span>
+        </button>
+        <button class="sidebar-main-item" onclick="location.href='appendix/grammar-index/index.html'">
+          <span class="sidebar-main-item-icon">📚</span>
+          <span class="sidebar-main-item-label">Grammar</span>
+        </button>
+        <button class="sidebar-main-item">
+          <span class="sidebar-main-item-icon">🗺️</span>
+          <span class="sidebar-main-item-label">Appendix</span>
+        </button>
+        <button class="sidebar-main-item">
+          <span class="sidebar-main-item-icon">🎯</span>
+          <span class="sidebar-main-item-label">Practice</span>
+        </button>
+        <button class="sidebar-main-item" onclick="location.href='../help/anki-decks/'">
+          <span class="sidebar-main-item-icon">⭐</span>
+          <span class="sidebar-main-item-label">Anki</span>
+        </button>
+        <button class="sidebar-main-item" onclick="GenkiSettings.manager(); return false;">
+          <span class="sidebar-main-item-icon">⚙️</span>
+          <span class="sidebar-main-item-label">Settings</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-divider"></div>
+
+      <div class="sidebar-units-label">Units</div>
+      <nav class="sidebar-units-nav">
+        <button class="side-item unit-link active" data-unit="0">第0課 · LESSON 0</button>
+        <button class="side-item unit-link" data-unit="1">第1課 · LESSON 1</button>
+      </nav>
+    </aside>
+
+    <!-- MAIN AREA -->
+    <main class="main">
+      <!-- TOP BAR (theme toggle) -->
+      <div class="top-bar">
+        <div class="top-actions">
+          <button class="btn-icon" id="themeToggle" aria-label="Toggle theme">🌙</button>
+        </div>
+      </div>
+
+      <!-- UNIT BANNER -->
+      <section class="unit-banner">
+        <div class="unit-banner-left">
+          <div class="unit-chip" id="unitChip">
+            <span>LESSON NUMBER</span>
+          </div>
+          <div class="unit-title" id="unitTitle">LESSON TITLE</div>
+        </div>
+        <button class="guide-pill" id="unitGrammar">
+          <span>GRAMMAR</span>
+        </button>
+      </section>
+
+      <!-- UNIT 0 -->
+      <section class="content-row unit-section" id="unit-0"
+              data-unit="0"
+              data-unit-title="Writing System, Greetings, and Numbers"
+              data-unit-chip="第0課 · LESSON 0">
+
+        <!-- PATH COLUMN -->
+        <div class="path-wrapper">
+          <div class="path-line"></div>
+          <div class="path-list">
+
+            <!-- WRITING SYSTEM -->
+            <div class="path-heading">WRITING SYSTEM (p.20–27)</div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-0/hiragana-1/index.html'">
+                <div class="lesson-node-icon">あ</div>
+              </div>
+              <div class="lesson-label">Hiragana (p.20–21)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-0/hiragana-2/index.html'">
+                <div class="lesson-node-icon">゛</div>
+              </div>
+              <div class="lesson-label">Hiragana: Diacritical Marks (p.21)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-0/hiragana-3/index.html'">
+                <div class="lesson-node-icon">きゃ</div>
+              </div>
+              <div class="lesson-label">Hiragana: Combos (p.21–22)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-0/katakana-1/index.html'">
+                <div class="lesson-node-icon">ア</div>
+              </div>
+              <div class="lesson-label">Katakana (p.24)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-0/katakana-2/index.html'">
+                <div class="lesson-node-icon">ガ</div>
+              </div>
+              <div class="lesson-label">Katakana: Diacritical Marks (p.25)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-0/katakana-3/index.html'">
+                <div class="lesson-node-icon">キャ</div>
+              </div>
+              <div class="lesson-label">Katakana: Combos (p.25)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-0/katakana-4/index.html'">
+                <div class="lesson-node-icon">ファ</div>
+              </div>
+              <div class="lesson-label">Katakana: Additional Combos (p.26)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-0/kana-match/index.html'">
+                <div class="lesson-node-icon">🔤</div>
+              </div>
+              <div class="lesson-label">Bonus: Match Hiragana & Katakana (p.20–21 & 24)</div>
+            </div>
+
+            <!-- GREETINGS -->
+            <div class="path-heading">GREETINGS (p.30–34)</div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-0/greetings/index.html'">
+                <div class="lesson-node-icon">👋</div>
+              </div>
+              <div class="lesson-label">Greetings 1 (p.32)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-0/greetings-2/index.html'">
+                <div class="lesson-node-icon">🙂</div>
+              </div>
+              <div class="lesson-label">Greetings 2 (p.32)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-0/culture-1/index.html'">
+                <div class="lesson-node-icon">🙏</div>
+              </div>
+              <div class="lesson-label">Culture Note: Greetings & Bowing (p.32)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-0/greetings-practice/index.html'">
+                <div class="lesson-node-icon">🗣️</div>
+              </div>
+              <div class="lesson-label">Practice: Greetings (p.34)</div>
+            </div>
+
+            <!-- NUMBERS -->
+            <div class="path-heading">NUMBERS (p.35)</div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-0/numbers-1/index.html'">
+                <div class="lesson-node-icon">0️⃣</div>
+              </div>
+              <div class="lesson-label">Numbers 0–14 (p.35)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-0/numbers-2/index.html'">
+                <div class="lesson-node-icon">🔢</div>
+              </div>
+              <div class="lesson-label">Numbers 15–100 (p.35)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-0/numbers-3/index.html'">
+                <div class="lesson-node-icon">📘</div>
+              </div>
+              <div class="lesson-label">Practice: Reading Numbers 1 (p.35 A)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-0/numbers-4/index.html'">
+                <div class="lesson-node-icon">📗</div>
+              </div>
+              <div class="lesson-label">Practice: Reading Numbers 2 (p.35 B)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-0/numbers-5/index.html'">
+                <div class="lesson-node-icon">📙</div>
+              </div>
+              <div class="lesson-label">Practice: Reading Numbers 3 (p.35 C)</div>
+            </div>
+
+            <!-- WORKBOOK -->
+            <div class="path-heading">WORKBOOK (p.13–15)</div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-0/workbook-1/index.html'">
+                <div class="lesson-node-icon">📕</div>
+              </div>
+              <div class="lesson-label">Workbook: Greetings (p.13–14)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-0/workbook-2/index.html'">
+                <div class="lesson-node-icon">✏️</div>
+              </div>
+              <div class="lesson-label">Workbook: Numbers (p.15)</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- MASCOT COLUMN -->
+        <aside class="mascot-card">
+          <div class="mascot-figure">
+            <img src="../resources/images/path/lesson-0.png">
+          </div>
+          <div class="mascot-title">In this lesson, we will learn to...</div>
+          <div class="mascot-text">
+            Read Hiragana and Katakana<br>
+            Greet people<br>
+            Read numbers and count<br>
+          </div>
+          <div class="progress-pill">
+            <span>Unit progress</span>
+            <span>0%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-bar-fill" style="width:0%"></div>
+          </div>
+        </aside>
+
+      </section>
+
+      <!-- UNIT 1 -->
+      <section class="content-row unit-section" id="unit-1"
+              data-unit="1"
+              data-unit-title="New Friends"
+              data-unit-chip="第1課 · LESSON 1">
+
+        <!-- PATH COLUMN -->
+        <div class="path-wrapper">
+          <div class="path-line"></div>
+          <div class="path-list">
+
+            <!-- VOCABULARY -->
+            <div class="path-heading">VOCABULARY (p.38–40)</div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/vocab-1/index.html'">
+                <div class="lesson-node-icon">🏫</div>
+              </div>
+              <div class="lesson-label">Vocabulary: School (p.38)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/vocab-2/index.html'">
+                <div class="lesson-node-icon">⏰</div>
+              </div>
+              <div class="lesson-label">Vocabulary: People and Time (p.38)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/vocab-3/index.html'">
+                <div class="lesson-node-icon">💬</div>
+              </div>
+              <div class="lesson-label">Vocabulary: Others and Expressions (p.38–39)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/vocab-4/index.html'">
+                <div class="lesson-node-icon">🌏</div>
+              </div>
+              <div class="lesson-label">Vocabulary: Countries (p.39)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/vocab-5/index.html'">
+                <div class="lesson-node-icon">📘</div>
+              </div>
+              <div class="lesson-label">Vocabulary: Majors (p.39)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/vocab-6/index.html'">
+                <div class="lesson-node-icon">💼</div>
+              </div>
+              <div class="lesson-label">Vocabulary: Occupations (p.39–40)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/vocab-7/index.html'">
+                <div class="lesson-node-icon">👨‍👩‍👧</div>
+              </div>
+              <div class="lesson-label">Vocabulary: Family (p.40)</div>
+            </div>
+
+            <!-- CULTURE -->
+            <div class="path-heading">CULTURE NOTE (p.45)</div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/culture-1/index.html'">
+                <div class="lesson-node-icon">🪪</div>
+              </div>
+              <div class="lesson-label">Culture Note: Japanese Names (p.45)</div>
+            </div>
+
+            <!-- GRAMMAR & PRACTICE -->
+            <div class="path-heading">GRAMMAR &amp; PRACTICE (p.46–53)</div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/grammar-1/index.html'">
+                <div class="lesson-node-icon">🇯🇵</div>
+              </div>
+              <div class="lesson-label">Practice: XはYです 1 (Nationality) (p.46; I-A)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/vocab-8/index.html'">
+                <div class="lesson-node-icon">🎓</div>
+              </div>
+              <div class="lesson-label">Practice Vocabulary: Year in School (p.46)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/grammar-2/index.html'">
+                <div class="lesson-node-icon">📚</div>
+              </div>
+              <div class="lesson-label">Practice: XはYです 2 (Year in School) (p.46; I-B)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/vocab-9/index.html'">
+                <div class="lesson-node-icon">🎂</div>
+              </div>
+              <div class="lesson-label">Practice Vocabulary: Age (p.47)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/grammar-3/index.html'">
+                <div class="lesson-node-icon">🔢</div>
+              </div>
+              <div class="lesson-label">Practice: XはYです 3 (Age) (p.47; I-C)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/grammar-4/index.html'">
+                <div class="lesson-node-icon">❓</div>
+              </div>
+              <div class="lesson-label">Practice: Question Sentences 1 (p.47–48; II-A)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/grammar-5/index.html'">
+                <div class="lesson-node-icon">❓</div>
+              </div>
+              <div class="lesson-label">Practice: Question Sentences 2 (p.48; II-B)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/grammar-6/index.html'">
+                <div class="lesson-node-icon">❓</div>
+              </div>
+              <div class="lesson-label">Practice: Question Sentences 3 (p.49; II-C)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/grammar-7/index.html'">
+                <div class="lesson-node-icon">の</div>
+              </div>
+              <div class="lesson-label">Practice: NounのNoun 1 (p.50; III-A)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/grammar-8/index.html'">
+                <div class="lesson-node-icon">の</div>
+              </div>
+              <div class="lesson-label">Practice: NounのNoun 2 (p.50; III-B)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/grammar-9/index.html'">
+                <div class="lesson-node-icon">の</div>
+              </div>
+              <div class="lesson-label">Practice: NounのNoun 3 (p.51; III-C)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/grammar-10/index.html'">
+                <div class="lesson-node-icon">📞</div>
+              </div>
+              <div class="lesson-label">Practice: Telephone Numbers (p.51; IV)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/vocab-10/index.html'">
+                <div class="lesson-node-icon">🕒</div>
+              </div>
+              <div class="lesson-label">Practice Vocabulary: Time (Hours) (p.52)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/grammar-11/index.html'">
+                <div class="lesson-node-icon">🕐</div>
+              </div>
+              <div class="lesson-label">Practice: Time 1 (p.52; V-A)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/grammar-12/index.html'">
+                <div class="lesson-node-icon">🕑</div>
+              </div>
+              <div class="lesson-label">Practice: Time 2 (p.53; V-C)</div>
+            </div>
+
+            <!-- USEFUL EXPRESSIONS -->
+            <div class="path-heading">USEFUL EXPRESSIONS: TIME (p.55)</div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/vocab-11/index.html'">
+                <div class="lesson-node-icon">⏱️</div>
+              </div>
+              <div class="lesson-label">Useful Expressions: Time (Minutes 1–10) (p.55)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/vocab-12/index.html'">
+                <div class="lesson-node-icon">⏲️</div>
+              </div>
+              <div class="lesson-label">Useful Expressions: Time (Minutes 11–30) (p.55)</div>
+            </div>
+
+            <!-- WORKBOOK -->
+            <div class="path-heading">WORKBOOK (Genki I Workbook: p.16–22)</div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/workbook-1/index.html'">
+                <div class="lesson-node-icon">📕</div>
+              </div>
+              <div class="lesson-label">Workbook: XはYです (p.16; I &amp; II)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/workbook-2/index.html'">
+                <div class="lesson-node-icon">❓</div>
+              </div>
+              <div class="lesson-label">Workbook: Question Sentences (p.17; I &amp; II)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/workbook-3/index.html'">
+                <div class="lesson-node-icon">の</div>
+              </div>
+              <div class="lesson-label">Workbook: NounのNoun (p.18; I &amp; II)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/workbook-4/index.html'">
+                <div class="lesson-node-icon">🕒</div>
+              </div>
+              <div class="lesson-label">Workbook: Time and Telephone Numbers (p.19; I &amp; II)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/workbook-5/index.html'">
+                <div class="lesson-node-icon">❔</div>
+              </div>
+              <div class="lesson-label">Workbook: Questions (p.20)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/workbook-6/index.html'">
+                <div class="lesson-node-icon">🎧</div>
+              </div>
+              <div class="lesson-label">Workbook: Listening Comprehension 1 (p.21; A)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/workbook-7/index.html'">
+                <div class="lesson-node-icon">🎧</div>
+              </div>
+              <div class="lesson-label">Workbook: Listening Comprehension 2 (p.22; B, C, &amp; D)</div>
+            </div>
+
+            <!-- READING & WRITING: TEXTBOOK -->
+            <div class="path-heading">READING &amp; WRITING: HIRAGANA (Genki I: p.296–299)</div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/literacy-1/index.html'">
+                <div class="lesson-node-icon">あ</div>
+              </div>
+              <div class="lesson-label">Hiragana Practice: Identifying Hiragana (p.297; I-A)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/literacy-2/index.html'">
+                <div class="lesson-node-icon">あ→語</div>
+              </div>
+              <div class="lesson-label">Hiragana Practice: Word Match (p.297; I-B)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/literacy-3/index.html'">
+                <div class="lesson-node-icon">゛゜</div>
+              </div>
+              <div class="lesson-label">Hiragana Practice: Diacritical Marks (p.297; I-C)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/literacy-4/index.html'">
+                <div class="lesson-node-icon">きゃ</div>
+              </div>
+              <div class="lesson-label">Hiragana Practice: Combos and Double Consonants (p.298; I-D)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/literacy-5/index.html'">
+                <div class="lesson-node-icon">おう</div>
+              </div>
+              <div class="lesson-label">Hiragana Practice: Long Vowels (p.298; I-E)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/literacy-6/index.html'">
+                <div class="lesson-node-icon">🧩</div>
+              </div>
+              <div class="lesson-label">Hiragana Practice: Unscramble the Words (p.298; I-F)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/literacy-7/index.html'">
+                <div class="lesson-node-icon">📖</div>
+              </div>
+              <div class="lesson-label">Reading Practice: Hiragana (p.299; II)</div>
+            </div>
+
+            <!-- READING & WRITING: WORKBOOK -->
+            <div class="path-heading">WORKBOOK: READING &amp; WRITING (Genki I Workbook: p.121–127)</div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/literacy-wb-1/index.html'">
+                <div class="lesson-node-icon">あ-こ</div>
+              </div>
+              <div class="lesson-label">Workbook: Hiragana (あ–こ) (p.121; I, II, &amp; III)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/literacy-wb-2/index.html'">
+                <div class="lesson-node-icon">さ-と</div>
+              </div>
+              <div class="lesson-label">Workbook: Hiragana (さ–と) (p.122; I, II, &amp; III)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/literacy-wb-3/index.html'">
+                <div class="lesson-node-icon">な-ほ</div>
+              </div>
+              <div class="lesson-label">Workbook: Hiragana (な–ほ) (p.123; I, II, &amp; III)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/literacy-wb-4/index.html'">
+                <div class="lesson-node-icon">ま-よ</div>
+              </div>
+              <div class="lesson-label">Workbook: Hiragana (ま–よ) (p.124; I, II, &amp; III)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/literacy-wb-5/index.html'">
+                <div class="lesson-node-icon">ら-ん</div>
+              </div>
+              <div class="lesson-label">Workbook: Hiragana (ら–ん) (p.125; I, II, &amp; III)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/literacy-wb-6/index.html'">
+                <div class="lesson-node-icon">゛ゃゅょ</div>
+              </div>
+              <div class="lesson-label">Workbook: Hiragana (Dots/Circles/Small や, ゆ, よ) (p.126; I–IV)</div>
+            </div>
+
+            <div class="lesson-group">
+              <div class="lesson-node" onclick="location.href='lesson-1/literacy-wb-7/index.html'">
+                <div class="lesson-node-icon">っー</div>
+              </div>
+              <div class="lesson-label">Workbook: Hiragana (Double Consonants/Long Vowels) (p.127; I–IV)</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- MASCOT COLUMN -->
+        <aside class="mascot-card">
+          <div class="mascot-figure">
+            <img src="../resources/images/path/lesson-1.png">
+          </div>
+          <div class="mascot-title">In this lesson, we will learn to...</div>
+          <div class="mascot-text">
+            Introduce ourselves<br>
+            Ask and tell people names, majors at school, time, etc.<br>
+          </div>
+          <div class="progress-pill">
+            <span>Unit progress</span>
+            <span>0%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-bar-fill" style="width:0%"></div>
+          </div>
+        </aside>
+
+      </section>
+    </main>
+  </div>
+
+  <script src="path.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
