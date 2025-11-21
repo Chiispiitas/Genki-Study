@@ -19,27 +19,72 @@ document.addEventListener('DOMContentLoaded', function () {
   /* ==============================================
       UNIT TITLE, CHIP & SIDEBAR LINKS
   ============================================== */
-  var sections      = Array.from(document.querySelectorAll('.unit-section'));
-  var unitLinks     = Array.from(document.querySelectorAll('.unit-link'));
-  var unitTitleEl   = document.getElementById('unitTitle');
-  var unitChipEl    = document.getElementById('unitChip');
-  var unitGrammEl   = document.getElementById('unitGrammar');
-  var unitChipSpan  = unitChipEl ? unitChipEl.querySelector('span') : null;
+  var sections       = Array.from(document.querySelectorAll('.unit-section'));
+  var unitLinks      = Array.from(document.querySelectorAll('.unit-link'));
+  var unitTitleEl    = document.getElementById('unitTitle');
+  var unitChipEl     = document.getElementById('unitChip');
+  var unitGrammEl    = document.getElementById('unitGrammar');
+  var sidebarUnitsEl = document.getElementById('sidebarUnits');
+  var unitChipSpan   = unitChipEl ? unitChipEl.querySelector('span') : null;
+
+  // will store currently active unit for the grammar button
+  var currentUnitId = null;
 
   if (!sections.length || !unitTitleEl || !unitChipSpan) {
     return;
   }
 
+  // Single listener for the "Grammar" button – uses currentUnitId
+  if (unitGrammEl) {
+    unitGrammEl.addEventListener('click', function () {
+      if (currentUnitId) {
+        location.href = "appendix/grammar-index/index.html#lesson-grammar-" + currentUnitId;
+      }
+    });
+  }
+
+  // Ensure the active sidebar item is visible inside #sidebarUnits
+  function ensureActiveSidebarItemVisible(activeLink) {
+    if (!sidebarUnitsEl || !activeLink) return;
+
+    var containerRect = sidebarUnitsEl.getBoundingClientRect();
+    var linkRect      = activeLink.getBoundingClientRect();
+
+    // If the link is above the visible area
+    if (linkRect.top < containerRect.top) {
+      var deltaUp = linkRect.top - containerRect.top - 8; // small padding
+      sidebarUnitsEl.scrollBy({
+        top: deltaUp,
+        behavior: 'smooth'
+      });
+    }
+    // If the link is below the visible area
+    else if (linkRect.bottom > containerRect.bottom) {
+      var deltaDown = linkRect.bottom - containerRect.bottom + 8; // small padding
+      sidebarUnitsEl.scrollBy({
+        top: deltaDown,
+        behavior: 'smooth'
+      });
+    }
+  }
+
   function setActiveUnit(unitId, titleText, chipText) {
+    var activeLink = null;
+
     unitLinks.forEach(function (link) {
-      link.classList.toggle('active', link.dataset.unit === unitId);
+      var isActive = (link.dataset.unit === unitId);
+      link.classList.toggle('active', isActive);
+      if (isActive) {
+        activeLink = link;
+      }
     });
 
     unitTitleEl.textContent  = titleText || '';
     unitChipSpan.textContent = chipText || '';
-    unitGrammEl.addEventListener('click', function () {
-      location.href = "appendix/grammar-index/index.html#lesson-grammar-" + unitId;
-    });
+    currentUnitId            = unitId; // update for grammar link
+
+    // Auto-scroll sidebar to keep active item in view
+    ensureActiveSidebarItemVisible(activeLink);
   }
 
   /* ==============================================
@@ -89,8 +134,8 @@ document.addEventListener('DOMContentLoaded', function () {
     /* If nothing is crossing the top line (very top of page),
        fall back to the first visible section. */
     if (!bestSection) {
-      var first      = sections[0];
-      var firstRect  = first.getBoundingClientRect();
+      var first     = sections[0];
+      var firstRect = first.getBoundingClientRect();
 
       if (firstRect.bottom > rootRect.top) {
         bestSection = first;
@@ -143,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
       } else {
         /* .main (or another element) is the scroll container */
-        var rootRect = rootElement.getBoundingClientRect();
+        var rootRect       = rootElement.getBoundingClientRect();
         var offsetInsideRoot = targetRect.top - rootRect.top;
         var targetYRoot      = scrollRoot.scrollTop + offsetInsideRoot - SCROLL_OFFSET;
 

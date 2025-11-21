@@ -209,6 +209,10 @@
       gap: 0.4rem;
       align-items: center;
       margin-bottom: 0.4rem;
+
+      max-height: 150px;   /* adjust as needed */
+      overflow-y: auto;    /* enables vertical scrolling */
+      overflow-x: hidden;  /* prevents horizontal movement */
     }
 
     .side-item {
@@ -418,7 +422,14 @@
     }
 
     .lesson-node-icon {
-      font-size: 1.8rem;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-size: clamp(0.8rem, 3vw, 1.8rem); 
+      overflow: hidden;
+      white-space: nowrap;
     }
 
     .lesson-label {
