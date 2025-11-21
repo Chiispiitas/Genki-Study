@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
       : { top: 0, height: window.innerHeight };
 
     /* Slight offset to avoid float issues */
-    var topLine = rootRect.top + 80;
+    var topLine = rootRect.top + 160;
 
     var bestSection = null;
     var bestTop     = -Infinity;

@@ -59,7 +59,7 @@
     // Match lesson nodes by their onclick href
     // e.g. onclick="location.href='lesson-1/grammar-1/index.html'"
     var nodes = document.querySelectorAll(
-      '.lesson-node[onclick*="' + key + '/"]'
+      '.lesson-node[onclick*="' + key + '"]'
     );
 
     for (var i = 0; i < nodes.length; i++) {
